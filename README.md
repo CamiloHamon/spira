@@ -25,10 +25,15 @@ Este comando sirve para instalar todos los modulos empleados para la creacion de
 ## Credenciales
 Las credenciales del usuario administrador son:
 <br>
-* correo: admin@admin.com
-* pass: 123
+* email: admin@admin.com
+* password: 123
 
-Las credenciales de usuarios estudiantes, se pueden ver en ``http://localhost:4200/info-user/idUser`` para conocer el correo, y la contrasena es 123.
+Las credenciales del usuario estudiante son:
+<br>
+* email: prueba@prueba.com
+* password: 123
+
+Ademas, las credenciales de usuarios estudiantes, se pueden ver en ``http://localhost:4200/info-user/idUser`` para conocer el correo, y la contraseña es 123.
  
 <!-- CONTACT -->
 ## Contact
