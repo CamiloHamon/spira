@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sistema Academico</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse show" id="navbarColor01">
+      <ul class="navbar-nav me-auto ml-auto">
+        <ng-container *ngIf="authService.isAdmin(); else isStudent">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/crear-usuario" routerLinkActive="active">
+              Crear Usuario
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ver-usuarios" routerLinkActive="active">
+              Ver Usuarios
+            </a>
+          </li>
+        </ng-container>
+        <ng-template #isStudent>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signin" routerLinkActive="active">
+              Mis Cursos
+            </a>
+          </li>
+        </ng-template>
+        <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/signin" routerLinkActive="active">
+              Iniciar Sesion
+            </a>
+          </li>
+        </ng-container>
+        <ng-template #loggedIn>
+          <li class="nav-item">
+            <a class="nav-link" (click)="authService.logout()" style="cursor: pointer;">
+              Cerrar Session
+            </a>
+          </li>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container py-2">
+  <router-outlet></router-outlet>
+</div>

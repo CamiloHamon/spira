@@ -1,0 +1,50 @@
+<div class="text-center">
+    <h3>Estudiantes</h3>
+</div>
+<div class="row align-content-center">
+    <div class="col-12 col-md-4 mb-3" *ngFor="let alumno of alumnos">
+        <div class="card bg-primary">
+            <div class="card-header text-center bg-white">
+                <strong>Estudiante #{{alumno.no}}</strong>
+            </div>
+            <div class="card-body">
+                <div class="row text-white">
+                    <div class="col-12">
+                        <strong cla> Nombre: </strong>{{alumno.nombre}}
+                    </div>
+                    <div class="col-12">
+                        <strong>Telefono:</strong> {{alumno.telefono}}
+                    </div>
+                    <div class="col-12">
+                        <strong cla> Correo: </strong>{{alumno.email}}
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent">
+                <div class="row justify-content-between px-2">
+                    <div class="col-4 px-1">
+                        <a [routerLink]="['/info-user/', alumno.idUser]">
+                            <button class="btn btn-success w-100">
+                                <strong>Ver</strong>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-4 px-1">
+                        <a href="">
+                            <button type="button" class="btn btn-warning w-100">
+                                <strong>Editar</strong>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-4 px-1">
+                        <a href="">
+                            <button type="button" class="btn btn-danger w-100">
+                                <strong>Eliminar</strong>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="text-center">
+    <h3>Mis Cursos</h3>
+</div>
+<div class="row align-content-center">
+    <div class="col-12 col-md-4 mb-3" *ngFor="let curso of cursos">
+        <div class="card bg-primary">
+            <div class="card-header text-center bg-white">
+                <strong>Curso #{{curso.no}}: {{curso.nombre}}</strong>
+            </div>
+            <div class="card-body">
+                <div class="row text-white">
+                    <div class="col-12 text-center mt-3">
+                        <strong>Intensidad Horaria</strong>
+                        <hr>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong cla> H. Inicio: </strong>{{curso.hInicio}}
+                            </div>
+                            <div class="col-6">
+                                <strong cla> H. Fin: </strong>{{curso.hFin}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

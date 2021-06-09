@@ -1,0 +1,38 @@
+<div class="row justify-content-center align-content-center">
+    <div class="col-11 col-md-6 mt-3">
+        <div class="card">
+            <form (submit)="addCurso()">
+                <div class="card-header">
+                    <strong>Agregar Curso al Estudiante:
+                        <span class="font-italic text-primary">
+                            {{alumno.nombre}}
+                        </span>
+                    </strong>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-check-label mb-2" for="exampleCheck1">Seleccione un curso</label>
+                        <select name="curso" id="" class="custom-select" [(ngModel)]="addCursos.curso">
+                            <option value=" 0" selected>-- Seleccione un curso --</option>
+                            <option *ngFor="let curso of cursos" [value]="curso.iddetalleCurso">
+                                {{curso.nombre}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check-label mb-2" for="exampleCheck1">Seleccione un horario</label>
+                        <select name="horario" id="" class="custom-select" [(ngModel)]="addCursos.horario">
+                            <option value="0" selected>-- Seleccione un intensidad horaria --</option>
+                            <option *ngFor="let horario of horarios" [value]="horario.idIntHoraria">
+                                {{horario.hInicio}} - {{horario.hFin}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <button type="submit" class="btn btn-primary btn-block">Asignar Curso</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

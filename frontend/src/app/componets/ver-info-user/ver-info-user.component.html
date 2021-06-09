@@ -1,0 +1,67 @@
+<div class="text-center">
+    <h3>Estudiante: <span class="font-italic text-primary">{{alumno.nombre}} </span></h3>
+</div>
+<div class="row justify-content-center mt-3">
+    <div class="col-12 col-md-4">
+        <div class="card bg-primary">
+            <div class="card-header text-center bg-white">
+                <strong>Informacion del Estudiante</strong>
+            </div>
+            <div class="card-body">
+                <div class="row text-white">
+                    <div class="col-12">
+                        <strong cla> Nombre: </strong>{{alumno.nombre}}
+                    </div>
+                    <div class="col-12">
+                        <strong>Telefono:</strong> {{alumno.telefono}}
+                    </div>
+                    <div class="col-12">
+                        <strong cla> Correo: </strong>{{alumno.email}}
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-white">
+                <div class="row">
+                    <div class="col-6">
+                        <a [routerLink]="['/add-curso/', alumno.idUser]">
+                            <button class=" btn btn-success w-100">Agregar Curso</button>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-warning w-100">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-11 col-md-4">
+        <div class="row mt-3 mt-md-auto">
+            <div class="card w-100">
+                <div class="card-header text-center">
+                    <strong>Cursos del Estudiante</strong>
+                </div>
+                <div class="card-body p-0">
+                    <div class="row border-bottom rounded mb-3 w-100 m-0 p-3" *ngFor="let curso of cursos">
+                        <div class="col-12 border-bottom pb-2 mb-2">
+                            <strong cla> Nombre: </strong>{{curso.nombre}}
+                        </div>
+                        <div class="col-12 text-center">
+                            <strong>Franja Horaria</strong>
+                        </div>
+                        <div class="col-6">
+                            <strong>Hora Inicio:</strong> {{curso.hInicio}}
+                        </div>
+                        <div class="col-6">
+                            <strong cla> Hora Fin: </strong>{{curso.hFin}}
+                        </div>
+                        <div class="col-12 text-right border-top pt-2 px-0">
+                            <a [routerLink]="['/eliminar-curso/', curso.idCursos, alumno.idUser ]">
+                                <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
