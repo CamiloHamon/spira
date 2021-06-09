@@ -7,6 +7,8 @@
 En este proyecto se hace un sistema de login con roles, en donde el administrador pueda crear estudiantes, <br />
 asignar materias y su intensidad horaria. Por otro lado, el usuario estudiante unicamente puede ver las <br />
 materias en las que esta inscrito. Se hace uso de Angular para frontend y Nodejs para backend. <br />
+
+![Test Image 4](https://github.com/CamiloHamon/spira/blob/main/jerarquia.png)
  
 <!-- LICENSE -->
 ## License
