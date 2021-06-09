@@ -21,6 +21,13 @@ Para el despliegue del proyecto, se debe ubicar en la carpeta ``backend`` y ejec
 <br>``npm install``
 ### Nota:
 Este comando sirve para instalar todos los modulos empleados para la creacion del proyecto en el ``frontend`` y en el ``backend``.
+
+## Credenciales
+Las credenciales del usuario administrador son:
+ &nbsp; correo: admin@admin.com
+ &nbsp; pass: 123
+
+Las credenciales de usuarios estudiantes, se pueden ver en ``http://localhost:4200/info-user/idUser`` para conocer el correo, y la contrasena es 123.
  
 <!-- CONTACT -->
 ## Contact
