@@ -12,10 +12,6 @@ materias en las que esta inscrito. <br> Se hace uso de Angular para frontend y N
 
 ![Jerarquia](https://github.com/CamiloHamon/spira/blob/main/jerarquia.png)
  
-<!-- LICENSE -->
-## License
- 
-Distribuido bajo la licencia MIT. Ver `LICENSE` para mas informacion.
  
 <!-- CONTACT -->
 ## Contact
